@@ -796,6 +796,20 @@ class BuilderApp:
                 "--workpath", os.path.join(build_dir, "work"),
                 "--specpath", build_dir,
                 "--clean",
+                "--hidden-import", "telebot",
+                "--collect-all", "telebot",
+                "--hidden-import", "pystray",
+                "--collect-all", "pystray",
+                "--hidden-import", "pyttsx3",
+                "--hidden-import", "pyttsx3.drivers",
+                "--hidden-import", "pyttsx3.drivers.sapi5",
+                "--collect-all", "pyttsx3",
+                "--hidden-import", "cv2",
+                "--collect-all", "cv2",
+                "--hidden-import", "PIL",
+                "--hidden-import", "psutil",
+                "--hidden-import", "requests",
+                "--hidden-import", "pyperclip"
             ]
 
             # Custom icon
