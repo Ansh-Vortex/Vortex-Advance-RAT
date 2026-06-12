@@ -11,9 +11,21 @@
 **Fully featured remote administration tool controlled through a Telegram bot.**
 **Multi-device support · Auto-reconnect · 60+ commands · Premium Builder UI**
 
+**This repository is the free edition of Vortex.**
+For the premium version, visit **[Vortex Premium RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)** or **[vortexcodes.org](https://vortexcodes.org)**.
+
 ---
 
 </div>
+
+## 🚀 Upgrade to Vortex Premium
+
+Vortex Advance RAT is the free edition. If you want the premium Vortex release, updates, and official project links, check out:
+
+- **Premium GitHub:** [github.com/Ansh-Vortex/Vortex-Premium-RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)
+- **Official Website:** [vortexcodes.org](https://vortexcodes.org)
+
+---
 
 ## ✨ Highlights
 
@@ -37,7 +49,7 @@ Download and install **Python 3.8+** from [python.org](https://www.python.org/do
 ### Step 2 — Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/Vortex-Advance-RAT.git
+git clone https://github.com/Ansh-Vortex/Vortex-Advance-RAT.git
 cd Vortex-Advance-RAT
 ```
 
@@ -278,6 +290,10 @@ pip install -r requirements.txt
 <div align="center">
 
 **Made with ❤️ by Vortex**
+
+Free edition: **Vortex Advance RAT**
+
+Premium edition: **[Vortex Premium RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)** · **[vortexcodes.org](https://vortexcodes.org)**
 
 ⭐ Star this repo if you found it useful!
 
