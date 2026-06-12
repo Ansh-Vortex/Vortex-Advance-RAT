@@ -136,8 +136,6 @@ Your standalone builder will be in the `dist/` folder.
 | `/openfile <path>` | Open file on PC |
 | `/drives` | List all drives |
 | `/search <name>` | Search for files |
-| `/encrypt <file> <key>` | Encrypt file (XOR) |
-| `/decrypt <file> <key>` | Decrypt file (XOR) |
 
 ### 🎭 Interaction
 | Command | Description |
@@ -168,7 +166,6 @@ Your standalone builder will be in the `dist/` folder.
 | `/record <sec>` | Record microphone |
 | `/keylog` | Start keylogger |
 | `/stopkeylog` | Stop keylogger & get log |
-| `/passwords` | Extract browser passwords |
 
 ### 🌐 Network
 | Command | Description |
@@ -184,20 +181,12 @@ Your standalone builder will be in the `dist/` folder.
 |---------|-------------|
 | `/blocksite <site>` | Block website (hosts file) |
 | `/unblocksite <site>` | Unblock website |
-| `/disabletaskmgr` | Disable Task Manager |
-| `/enabletaskmgr` | Enable Task Manager |
-| `/disabledefender` | Disable Windows Defender |
-| `/enabledefender` | Restore Windows Defender |
-| `/disablefirewall` | Disable Windows Firewall |
-| `/enablefirewall` | Restore Windows Firewall |
 | `/hidetaskbar` | Hide taskbar |
 | `/showtaskbar` | Show taskbar |
 | `/hidedesktop` | Hide desktop icons |
 | `/showdesktop` | Show desktop icons |
 | `/swap_mouse` | Swap mouse buttons |
 | `/unswap_mouse` | Reset mouse buttons |
-| `/bluescreen` | Trigger BSOD (requires admin) |
-| `/critproc` | Make process unkillable |
 
 ### ⚙️ General
 | Command | Description |
