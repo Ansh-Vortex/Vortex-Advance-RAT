@@ -293,7 +293,7 @@ pip install -r requirements.txt
 
 Free edition: **Vortex Advance RAT**
 
-Premium edition: **[Vortex Premium RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)** · **[vortexcodes.org](https://vortexcodes.org)**
+Premium edition: **<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="vortexcodes" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>** · **[vortexcodes.org](https://vortexcodes.org)**
 
 ⭐ Star this repo if you found it useful!
 
