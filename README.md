@@ -293,7 +293,7 @@ pip install -r requirements.txt
 
 Free edition: **Vortex Advance RAT**
 
-Premium edition: **[Vortex Premium RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)** · **[vortexcodes.org](https://vortexcodes.org)**
+Premium edition:· **[vortexcodes.org](https://vortexcodes.org)**
 
 ⭐ Star this repo if you found it useful!
 
