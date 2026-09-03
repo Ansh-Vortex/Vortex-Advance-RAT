@@ -1,0 +1,15 @@
+pyTelegramBotAPI
+Pillow
+pyttsx3
+pyautogui
+opencv-python
+pyperclip
+requests
+pystray
+pyinstaller
+psutil
+pycaw
+comtypes
+pyaudio
+keyboard
+pycryptodome
